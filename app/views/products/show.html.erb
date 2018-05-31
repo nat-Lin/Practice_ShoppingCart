@@ -1,0 +1,11 @@
+<div>
+  <h2><%= @product.name %></h2>
+</div>
+<hr />
+<div><%= @product.description %></div>
+<hr />
+<div>售價：<%= @product.price %></div>
+<hr />
+
+<%= link_to '回到首頁', products_path, class: "btn btn-success btn-sm" %>
+<%= link_to '編輯', edit_product_path, class: "btn btn-success btn-sm" %>
