@@ -11,12 +11,16 @@ class CartsController < ApplicationController
 		end
 	end
 
+	def show
+	end
+
 	def destroy
 		session[:lucart1201] = nil
 		redirect_to products_path, notice: "已清空購物車"
 	end
 
 	def checkout
+		@user = User.new
+		@client_token = gateway.client_token.generate
 	end
-	
 end

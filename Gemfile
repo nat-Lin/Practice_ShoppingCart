@@ -9,6 +9,7 @@ gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem "braintree", "~> 2.89.0"
+gem 'aasm', '~> 4.12', '>= 4.12.3'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
@@ -31,6 +32,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.1', '>= 4.1.1'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'simple_form', '~> 4.0', '>= 4.0.1'
+
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

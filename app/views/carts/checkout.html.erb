@@ -1,0 +1,23 @@
+<h1>結帳明細</h1>
+
+<%= render "order" %>
+
+<%= simple_form_for @user, url: orders_path, method: :post do |f|%>
+  <%= f.input :name %>
+  <%= f.input :tel %>
+  <%= f.input :address %>
+
+  <hr/>
+  <div id="payment-form"></div>
+
+  <%= f.submit "送出", class: "btn btn-danger" %>
+<% end %>
+
+<script src="https://js.braintreegateway.com/js/braintree-2.32.1.min.js"></script>
+<script>
+  var clientToken = "<%= @client_token %>";
+
+  braintree.setup(clientToken, "dropin", {
+   container: "payment-form"
+  });
+</script>
